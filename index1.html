@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+        <title>My TODOs</title>
+        <link rel="stylesheet" type="text/css" href="css/style1.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Todos</h1>
+                
+            </header>
+            <section>
+                <input type="checkbox" id="selectAllTodo"><label for="selectAllTodo">Mark all Todos completed</label>
+                <ul id="todo-list" class="list"></ul>
+            </section>
+            <footer id="footerBar">
+                <span id="todoSelected">0</span> items selected
+                <a href="javascript:void(0);" class="clearDoneTodo">Clear competed todo</a>
+            </footer>
+        </div>
+        <!-- template for menu -->
+        <script type="text/template" id="tpl-menu">
+            <input type="text" id="todoContent" value="" placeholder="What do you want to do?">
+        </script>
+        <!--template for listing
+        <script type="text/template" id="tpl-list-item">
+            
+            <li class="todo" data-done="<%=done%>" data-index="<%=index%>">
+                <input class="todoDone" type="checkbox" <%= doneChecked %> name="todoTitle"><label <%=doneClass%> for="todoTitle"><%=title%></label>
+                <a href="javascript:void(0);" class="deleteTodo"></a>
+            </li>
+        </script>-->
+        <script src="js/vendor/jQuery-3.5.1-min.js"></script>
+        <script src="js/vendor/underscore-min.js"></script>
+        <script src="js/vendor/backbone-min.js"></script>
+        <script src="js/vendor/handlebars-v4.7.6.js"></script>
+        <script src="js/App.js"></script>
+        <script>
+            window.onload = function() {
+                app.init();
+                Backbone.history.start();
+            }
+        </script>
+        <script src="js/models/ToDo.js"></script>
+        <script src="js/collections/ToDos.js"></script>
+        <script src="js/views/menu.js"></script>
+        <script src="js/views/list.js"></script>
+        <script src="js/views/form.js"></script>
+    </body>
+</html>

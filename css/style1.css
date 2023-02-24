@@ -1,0 +1,79 @@
+body, html {
+	width: 550px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	font-family: Tahoma;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.container{
+	margin:30px;
+	border: 1px solid #ccc;
+	box-shadow: 5px 5px 5px 5px lightblue;
+}
+
+header{
+	margin:20px;
+}
+
+header input{
+	padding:15px;
+	font-style: italic;
+	width:90%;
+	font-size: 16px;
+}
+header h1{
+	text-align:center;
+}
+
+section{
+	display:none;
+	margin:20px;
+}
+
+section ul{
+	padding:0px;
+}
+
+section ul li{
+	list-style-type: none;
+	line-height: 2;
+}
+
+section ul li .strikeTodo{
+	text-decoration: line-through;
+}
+
+section ul li .deleteTodo{
+	display: none;
+	border-radius:10px;
+	background:url('../images/delete-sign.png') no-repeat;
+	float:right;
+	height:30px;
+	width:30px;
+}
+
+section ul li:hover .deleteTodo{
+	display:block;
+}
+
+footer{
+	display: block;
+    background: #f4fce8;
+    border-radius: 3px;
+    padding:10px;
+}
+
+footer .clearDoneTodo{
+	display:none;
+	float: right;
+    text-decoration: none;
+    color: black;
+    background: #ccc;
+    padding: 4px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
